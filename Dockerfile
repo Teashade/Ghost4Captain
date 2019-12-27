@@ -2,14 +2,15 @@ FROM ghost:latest
 
 ARG URL_SITE
 ARG URL_ADMIN
-ARG MAIL_NAME Mailgun
-ARG MAIL_HOST smtp.mailgun.org
-ARG MAIL_USER postmaster@something.mailgun.org
-ARG MAIL_PASS ****
+ARG MAIL_NAME
+ARG MAIL_HOST
+ARG MAIL_USER
+ARG MAIL_PASS
 
 #URL
-RUN ghost config --url $URL_SITE
-RUN ghost config --admin-url $URL_ADMIN
+
+RUN if [[ -z "$URL_SITE"] ]; then ghost config --url $URL_SITE fi
+RUN if [[ -z "$URL_ADMIN"] ]; then ghost config --admin-url $URL_ADMIN fi
 
 # MAIL
 RUN ghost config --mail SMTP
