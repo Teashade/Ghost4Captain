@@ -4,7 +4,6 @@ FROM ghost:latest
 # https://github.com/TryGhost/Ghost-CLI/blob/master/lib/tasks/configure/options.js
 
 ARG URL_SITE="http://localhost:2368"
-ARG URL_ADMIN="http://localhost:2368"
 ARG MAIL_NAME
 ARG MAIL_HOST
 ARG MAIL_USER
@@ -12,7 +11,6 @@ ARG MAIL_PASS
 
 #URL
 RUN ghost config --url $URL_SITE
-RUN ghost config --adminUrl $URL_ADMIN
 RUN ghost config --ip 0.0.0.0
 
 # MAIL
