@@ -1,4 +1,4 @@
-FROM ghost:alpine
+FROM ghost:latest
 
 ARG URL_SITE="http://localhost:2368"
 ARG URL_ADMIN="http://localhost:2368"
