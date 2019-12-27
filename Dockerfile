@@ -1,1 +1,1 @@
-FROM ghost:alpine
+FROM ghost:latest
