@@ -4,5 +4,7 @@ FROM ghost:latest
 # https://github.com/TryGhost/Ghost-CLI/blob/master/lib/tasks/configure/options.js
 # https://github.com/docker-library/ghost/issues/77#issuecomment-321247145
 
-RUN ghost config url ${URL_SITE}
+ARG URL_SITE
+
+RUN ghost config url $URL_SITE
 CMD ["node", "current/index.js"]
