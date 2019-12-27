@@ -6,5 +6,4 @@ FROM ghost:latest
 ADD ./config.sh /var/lib/ghost/config.sh
 RUN ["chmod", "+x", "/var/lib/ghost/config.sh"]
 WORKDIR /var/lib/ghost
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["./config.sh"]
+RUN ["./config.sh"]
