@@ -8,9 +8,8 @@ ARG MAIL_USER
 ARG MAIL_PASS
 
 #URL
-
-RUN if [[ -z "${URL_SITE}"] ]; then ghost config --url $URL_SITE; fi
-RUN if [[ -z "${URL_ADMIN}"] ]; then ghost config --admin-url $URL_ADMIN; fi
+RUN if [[ -z $URL_SITE]]; then ghost config --url $URL_SITE; fi
+RUN if [[ -z $URL_ADMIN]]; then ghost config --admin-url $URL_ADMIN; fi
 
 # MAIL
 RUN ghost config --mail SMTP
