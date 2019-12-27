@@ -5,5 +5,5 @@ FROM ghost:latest
 # https://github.com/docker-library/ghost/issues/77#issuecomment-321247145
 
 FROM ghost:latest
-RUN ghost config url $URL_SITE
+RUN ghost config url ${URL_SITE}
 CMD ["node", "current/index.js"]
