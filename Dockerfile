@@ -5,11 +5,13 @@ FROM ghost:latest
 # https://github.com/docker-library/ghost/issues/77#issuecomment-321247145
 
 ARG URL_SITE
+ARG URL_ADMIN
 ARG MAIL_NAME
 ARG MAIL_HOST
 ARG MAIL_PASS
 
 RUN ghost config url $URL_SITE
+RUN ghost config adminUrl $URL_ADMIN
 
 RUN ghost config mail SMTP
 RUN ghost config mailport 465
