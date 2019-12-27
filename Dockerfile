@@ -1,1 +1,1 @@
-FROM bitnami/ghost:latest
+FROM _/ghost:alpine
