@@ -19,4 +19,6 @@ RUN ghost config --url $URL_SITE
 #RUN ghost config --mailhost $MAIL_HOST
 #RUN ghost config --mailport 465
 
+ENV GHOST_INSTALL /var/lib/ghost
+WORKDIR $GHOST_INSTALL
 CMD ["node", "current/index.js"]
