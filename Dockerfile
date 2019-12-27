@@ -12,11 +12,11 @@ ARG MAIL_PASS
 
 RUN ghost config url $URL_SITE
 
-RUN ghost config mail SMTP
-RUN ghost config mailport 465
-RUN ghost config mail $MAIL_NAME
-RUN ghost config mailservice $MAIL_HOST
-RUN ghost config mailuser $MAIL_USER
-RUN ghost config mailpass $MAIL_PASS
+#RUN ghost config mail SMTP
+#RUN ghost config mailport 465
+#RUN ghost config mail $MAIL_NAME
+#RUN ghost config mailservice $MAIL_HOST
+#RUN ghost config mailuser $MAIL_USER
+#RUN ghost config mailpass $MAIL_PASS
 
 CMD ["node", "current/index.js"]
