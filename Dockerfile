@@ -6,4 +6,4 @@ FROM ghost:latest
 ADD ./config.sh /var/lib/ghost/config.sh
 RUN ["chmod", "+x", "/var/lib/ghost/config.sh"]
 WORKDIR /var/lib/ghost
-CMD ["config.sh"]
+CMD ["./config.sh"]
