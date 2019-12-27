@@ -1,5 +1,7 @@
 #!/bin/bash
 
+node current/index.js
+
 [ -z "${URL_SITE}" ] && ghost config url ${URL_SITE};
 
 ghost config --mail SMTP;
