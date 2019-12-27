@@ -20,4 +20,5 @@ RUN ghost config --url $URL_SITE
 #RUN ghost config --mailport 465
 
 WORKDIR /var/lib/ghost
+RUN ls
 CMD ["node", "current/index.js"]
