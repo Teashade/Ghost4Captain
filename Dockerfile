@@ -5,4 +5,5 @@ FROM ghost:latest
 
 ADD ./config.sh /var/lib/ghost/config.sh
 WORKDIR /var/lib/ghost
-CMD ["config.sh" , "node current/index.js"]
+RUN ls
+CMD ["./config.sh" , "node current/index.js"]
