@@ -21,5 +21,5 @@ RUN ghost config --mailpass $MAIL_PASS
 RUN ghost config --mailhost $MAIL_HOST
 RUN ghost config --mailport 465
 
-WORKDIR /var/lib/ghost
-CMD ["node", "current/index.js"]
+#WORKDIR /var/lib/ghost
+#CMD ["node", "current/index.js"]
