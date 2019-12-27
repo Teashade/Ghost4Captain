@@ -18,5 +18,5 @@ RUN ghost config --admin-url $URL_ADMIN
 #RUN ghost config --mailpass $MAIL_PASS
 #RUN ghost config --mailhost $MAIL_HOST
 #RUN ghost config --mailport 465
-
+EXPOSE 2368
 CMD ["node", "current/index.js"]
