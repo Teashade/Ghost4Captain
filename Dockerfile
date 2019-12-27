@@ -1,4 +1,6 @@
 FROM ghost:latest
 
-RUN ghost config url ${URL}
+ARG URL
+
+RUN ghost config url URL
 CMD ["node", "current/index.js"]
