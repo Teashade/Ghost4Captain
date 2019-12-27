@@ -1,15 +1,15 @@
 FROM ghost:latest
 
-ARG URL_SITE
-ARG URL_ADMIN
+ARG URL_SITE http://localhost:2368
+ARG URL_ADMIN http://localhost:2368/admin
 ARG MAIL_NAME
 ARG MAIL_HOST
 ARG MAIL_USER
 ARG MAIL_PASS
 
 #URL
-RUN [ -z "${URL_SITE}" ] && ghost config --url $URL_SITE
-RUN [ -z "$URL_ADMIN" ] && ghost config --admin-url $URL_ADMIN
+ghost config --url $URL_SITE
+ghost config --admin-url $URL_ADMIN
 
 # MAIL
 RUN ghost config --mail SMTP
