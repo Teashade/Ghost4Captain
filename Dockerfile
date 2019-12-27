@@ -4,6 +4,6 @@ FROM ghost:latest
 # https://github.com/TryGhost/Ghost-CLI/blob/master/lib/tasks/configure/options.js
 
 ADD ./config.sh /var/lib/ghost/config.sh
+RUN ["chmod", "+x", "/var/lib/ghost/config.sh"]
 WORKDIR /var/lib/ghost
-RUN ls
 CMD ["./config.sh" , "node current/index.js"]
