@@ -3,7 +3,8 @@ FROM ghost:latest
 # config options
 # https://github.com/TryGhost/Ghost-CLI/blob/master/lib/tasks/configure/options.js
 
-ADD ./config.sh /var/lib/ghost/config.sh
-RUN ["chmod", "+x", "/var/lib/ghost/config.sh"]
-WORKDIR /var/lib/ghost
-RUN ["./config.sh"]
+ARG URL="http://localhost:2368"
+
+FROM ghost:latest
+RUN ghost config url ${URL_SITE};
+CMD ["node", "current/index.js"]
