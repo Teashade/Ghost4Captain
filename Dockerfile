@@ -1,1 +1,1 @@
-FROM _/ghost:alpine
+FROM ghost:alpine
