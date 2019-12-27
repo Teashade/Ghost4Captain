@@ -1,7 +1,7 @@
 FROM ghost:latest
 
-ARG URL_SITE "http://localhost:2368"
-ARG URL_ADMIN "http://localhost:2368/admin"
+ARG URL_SITE="http://localhost:2368"
+ARG URL_ADMIN="http://localhost:2368/admin"
 ARG MAIL_NAME
 ARG MAIL_HOST
 ARG MAIL_USER
