@@ -11,7 +11,7 @@ ARG MAIL_PASS
 
 #URL
 RUN ghost config --url $URL_SITE
-RUN ghost config --ip 0.0.0.0
+RUN ghost config --ip localhost
 
 # MAIL
 RUN ghost config --mail SMTP
