@@ -1,4 +1,4 @@
-FROM ghost:3.29.1
+FROM ghost:3.31.5
 
 # config options
 # https://github.com/TryGhost/Ghost-CLI/blob/master/lib/tasks/configure/options.js
