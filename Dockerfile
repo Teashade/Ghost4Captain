@@ -20,4 +20,6 @@ RUN ghost config mailservice $MAIL_HOST
 RUN ghost config mailuser $MAIL_USER
 RUN ghost config mailpass $MAIL_PASS
 
+RUN useradd -ms /bin/bash user
+
 CMD ["node", "current/index.js"]
